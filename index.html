@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <!-- Agrega los enlaces a los archivos CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Agrega Font Awesome para el icono de Instagram -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Agrega tu CSS personalizado aquí */
+        .text-green {
+            color: green;
+        }
+
+        .text-purple {
+            color: purple;
+        }
+
+        .container {
+            margin-top: 20px;
+            padding: 20px; /* Relleno interior */
+            border: 1px solid #000; /* Agregamos un borde sólido negro */
+
+        }
+
+        .input-group-addon {
+            background-color: #e9ecef;
+            padding: 6px 12px;
+        }
+
+        .btn-secondary {
+            background-color: gray;
+            color: white;
+        }
+
+        /* Estilos para Payment form example */
+        .container {
+            padding: 2px; /* Espaciado interior */
+        }
+        .payment-form-title {
+        background-color: #f5f5f5; /* Fondo gris claro */
+        border-bottom: 1px solid #00000085; /* Borde sólido negro */
+        padding: 20px; /* Espaciado interior */
+    }
+
+
+        /* Estilos para Some fields are missing */
+        .fields-missing {
+            background-color: #ff0000; /* Fondo rojo */
+            color: #fff; /* Texto blanco */
+            padding: 10px; /* Espaciado interior */
+        }
+
+        /* Estilos para el contenedor de los botones */
+        .button-container {
+            background-color: #d0d0d0; /* Fondo gris claro */
+            padding: 10px; /* Espaciado interior */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-left text-purple payment-form-title">Payment Form Example</h2>
+
+        <!-- Agregamos el mensaje de error con la clase "d-none" para ocultarlo inicialmente -->
+        <div class="error-message d-none">Some fields are missing.</div>
+
+        <form>
+            <div class="mb-3">
+                <label for="cardNumber" class="form-label">Card#</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="#######" required>
+            </div>
+            <div class="mb-3">
+                <label for="cvc" class="form-label">CVC #</label>
+                <input type="number" class="form-control" id="cvc" placeholder="0000" required>
+            </div>
+            <div class="mb-3">
+                <label for="amount" class="form-label">Amount</label>
+                <div class="input-group">
+                    <span class="input-group-text text-green">$</span>
+                    <input type="number" class="form-control" id="amount" placeholder="Amount" required>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="firstname" class="text-green">First Name</label>
+                    <input type="text" class="form-control" id="firstname">
+                </div>
+                <div class="mb-3">
+                    <label for="city" class="text-green">City</label>
+                    <input type="text" class="form-control" id="city">
+                </div>
+                <div class="mb-3 text-green">
+                    <label>We accept</label>
+                    <!-- Colocar selectores de tarjetas de crédito aquí -->
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="mastercard">
+                        <label class="form-check-label" for="mastercard">
+                            <img src="ruta_de_la_imagen_mastercard" alt="Mastercard">
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="visa">
+                        <label class="form-check-label" for="visa">
+                            <img src="ruta_de_la_imagen_visa" alt="Visa">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <label for="lastname" class="text-green">Last Name</label>
+                        <input type="text" class="form-control" id="lastname">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="state" class="text-green">State</label>
+                        <select class="form-select" id="state">
+                            <!-- Opciones para el estado -->
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="postalCode" class="text-green">Postal Code</label>
+                        <input type="text" class="form-control" id="postalCode">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="message" class="text-green">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Add any notes here"></textarea>
+                    <!-- Ahora, el textarea está fuera del contenedor principal pero aún dentro del formulario -->
+   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container d-flex justify-content-end mt-3">
+            <button type="button" class="btn btn-secondary me-2">Cancel</button>
+            <button type="submit" class="btn btn-primary ms-2">Send</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Incluye Bootstrap JS si lo usas -->
+</body>
+</html>
