@@ -69,19 +69,27 @@
         <div class="error-message d-none">Some fields are missing.</div>
 
         <form>
-            <div class="mb-3">
-                <label for="cardNumber" class="form-label">Card#</label>
-                <input type="text" class="form-control" id="cardNumber" placeholder="#######" required>
-            </div>
-            <div class="mb-3">
-                <label for="cvc" class="form-label">CVC #</label>
-                <input type="number" class="form-control" id="cvc" placeholder="0000" required>
-            </div>
-            <div class="mb-3">
-                <label for="amount" class="form-label">Amount</label>
-                <div class="input-group">
-                    <span class="input-group-text text-green">$</span>
-                    <input type="number" class="form-control" id="amount" placeholder="Amount" required>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Card#</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="#######" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="cvc" class="form-label">CVC #</label>
+                        <input type="number" class "form-control" id="cvc" placeholder="0000" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <div class="input-group">
+                            <span class="input-group-text text-green">$</span>
+                            <input type="number" class="form-control" id="amount" placeholder="Amount" required>
+                        </div>
+                    </div>
                 </div>
             </div>
         <div class="row">
